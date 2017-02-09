@@ -14,17 +14,15 @@ namespace cis237inclass3
             UserInterface ui = new UserInterface();
 
             //Let's make an array to hold a bunch of instances of the Employee class
-            SalaryEmployee[] employees = new SalaryEmployee[10];
+            Employee[] employees = new Employee[10];
 
             //Let's add some employees to our array
             employees[0] = new SalaryEmployee("David", "Barnes", 835.00m);
             employees[1] = new SalaryEmployee("James", "Kirk", 453.00m);
             employees[2] = new SalaryEmployee("Jean-Luc", "Picard", 290.00m);
-            employees[3] = new SalaryEmployee("Benjamin", "Sisko", 587.00m);
-            employees[4] = new SalaryEmployee("Kathryn", "Janeway", 194.00m);
+            employees[3] = new HourlyEmployee("Benjamin", "Sisko", 40m, 26.00m);
+            employees[4] = new HourlyEmployee("Kathryn", "Janeway", 20m, 15.00m);
             employees[5] = new SalaryEmployee("Johnathan", "Archer", 135.00m);
-            
-
 
             //Get some input from the user
             int choice = ui.GetUserInput();
@@ -39,12 +37,13 @@ namespace cis237inclass3
                     string outputString = "";
 
                     //Print out the employees in the array
-                    foreach (SalaryEmployee employee in employees)
+                    foreach (Employee employee in employees)
                     {
                         if (employee != null)
                         {
                             //Concat to the outputString
                             outputString += employee.ToString() +
+                                " " + employee.GetFormattedSalary() +
                                 Environment.NewLine;
                         }
                     }

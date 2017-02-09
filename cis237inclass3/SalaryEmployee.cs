@@ -29,8 +29,15 @@ namespace cis237inclass3
         //******************************
         public override string ToString()
         {
-            return base.ToString() + " " + weeklySalary.ToString("C");
+            return base.ToString() + " " + Salary.ToString("C");
         }
+
+        public override string GetFormattedSalary()
+        {
+            return Salary.ToString("C");
+        }
+
+
 
         //*****************************
         //Constructors
