@@ -37,6 +37,14 @@ namespace cis237inclass3
             return Salary.ToString("C");
         }
 
+        //This is the clone method that we had to write an implementation for
+        //because it is declared abstract in our parent class, which is also
+        //declared in the parents interface that it implements.
+        public override object Clone()
+        {
+            return new SalaryEmployee(this.FirstName, this.LastName, this.weeklySalary);
+        }
+
 
 
         //*****************************

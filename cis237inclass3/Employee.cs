@@ -10,7 +10,7 @@ namespace cis237inclass3
     //keyword before the word class. Abstract classes can not be instanciated.
     //The primary use for them is to provide functionality that child classes
     //can use, and extend from.
-    abstract class Employee
+    abstract class Employee : IEmployee //Implement IEmployee
     {
         //Const for weeks per year
         protected const decimal WEEKS_PER_YEAR = 52;
@@ -68,6 +68,15 @@ namespace cis237inclass3
         {
             return this.lastName + ", " + this.firstName;
         }
+
+        //This method is declared in the IClonable interface that IEmployee implements
+        //since we implment IEmployee, and IEmployee implments IClonable, we have to
+        //provide an implementation to the methods listed in IClonable. The only
+        //method declared there is "Clone" (This method). Since we don't know how
+        //to clone our children, and we can't instanciate Employee due to it being
+        //abstract, we declare this method as abstract, and push the work of making
+        //the implementation down to the child class to figure out. 
+        public abstract object Clone();
 
         //*****************************
         //Constructors
