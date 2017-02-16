@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cis237inclass3
 {
-    class UserInterface
+    public class UserInterface
     {
         //No Variables
         //No Properties

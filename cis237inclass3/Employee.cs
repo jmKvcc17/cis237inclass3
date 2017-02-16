@@ -10,7 +10,7 @@ namespace cis237inclass3
     //keyword before the word class. Abstract classes can not be instanciated.
     //The primary use for them is to provide functionality that child classes
     //can use, and extend from.
-    abstract class Employee : IEmployee //Implement IEmployee
+    public abstract class Employee : IEmployee //Implement IEmployee
     {
         //Const for weeks per year
         protected const decimal WEEKS_PER_YEAR = 52;

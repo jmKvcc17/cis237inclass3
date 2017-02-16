@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cis237inclass3
 {
-    class SalaryEmployee : Employee
+    public class SalaryEmployee : Employee
     {
         //*****************************
         //Variable / Backing fields
